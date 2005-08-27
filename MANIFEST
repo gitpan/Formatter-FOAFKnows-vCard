@@ -1,0 +1,10 @@
+bin/foafvcard.pl
+Changes
+lib/Formatter/FOAFKnows/vCard.pm
+Makefile.PL
+MANIFEST
+MANIFEST.SKIP
+README
+SIGNATURE
+t/Formatter-FOAFKnows-vCard.t
+META.yml                                 Module meta-data (added by MakeMaker)

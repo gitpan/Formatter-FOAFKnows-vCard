@@ -1,0 +1,46 @@
+Formatter-FOAFKnows-vCard version 0.1
+=====================================
+
+This module takes a vCard string parses it using L<Text::vCard> and
+attempts to make C<foaf:knows> records from it. It's scope is limited
+to that, it is not intended to be a full vCard to RDF conversion
+module, it just wants to make reasonable knows records of your
+contacts.
+
+It is also conservative in what it outputs. If a vCard contains a
+"CONFIDENTIAL" class, it will write nothing, and unless a there is a
+"PUBLIC" class, it will only output the SHA1-hashed mailbox, a nick if
+it exists and a homepage if it exists. A discussion of these issues
+will appear in this module later.
+
+The module also contains a script foafvcard.pl. Not very useful right
+now, you will have to edit it, but it is the idea that in future
+versions, it can be run from the command line to use the module to
+produce useful files directly.
+
+More information will appear here later.
+
+INSTALLATION
+
+To install this module use the CPAN or CPANPLUS tools or type the
+following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires Text::vCard and Digest::SHA1.
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2005 by Kjetil Kjernsmo
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.4 or,
+at your option, any later version of Perl 5 you may have available.
+
+
